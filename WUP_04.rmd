@@ -40,9 +40,21 @@ WORDSUM is numerical, and degree is categorical. So I used the numerical, catego
 ### Graphical Descriptive Results
 
 <!--Graphical results here.  Make sure to show your code.  Provide appropriate labels for axes, giving units if possible, and provide a good title for the graph, too.  Use the graphical results to describe the patterns if any that exist in the data as focused toward the research question!-->
+```{r}
+par(mar = c(5, 15, 5, 2))
+
+boxplot(WORDSUM~DEGREE,data=data)
+```
+ 
+ On the box plot, it shows that there is a difference on WORDSUM, based on the degree. High school and less than high school degrees have the lowest WORDSUM. While those with a graduate degree has the highest, and the bachelor's has the second highest.  
 
 ### Numerical Descriptive Results
 
+```{r}
+favstats(WORDSUM~DEGREE,data=data)
+```
+  
+  This table confirms that the graduate's median is 11, indicating the highest in WORDSUM. Also, the lowest WORDSUM median is 8, scoring the lowest, and high school graduates scoring the second lowest. 
 <!--Numerical results go here. Use the numerical results to describe the patterns if any that exist in the data as focused toward the research question!-->
 
 ## Inferential Results
